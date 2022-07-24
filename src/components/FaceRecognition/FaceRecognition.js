@@ -1,7 +1,11 @@
 import React from "react";
 import "./FaceRecognition.css";
+import { useSelector } from "react-redux";
 
-const FaceRecognition = ({ imageUrl, box }) => {
+const FaceRecognition = () => {
+  const imageUrl = useSelector((state) => state.app.imageUrl);
+  const box = useSelector((state) => state.app.box);
+
   return (
     <div className="center ma">
       <div className="absolute mt2">
